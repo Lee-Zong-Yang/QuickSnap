@@ -55,6 +55,24 @@ namespace CardGames.GameLogic
 		public void Shuffle()
 		{
 			//TODO: implement shuffle!
+			for (int i = 0; i < 52; i++) 
+			{
+				if (_cards [i].FaceUp)
+					_cards [i].TurnOver ();
+			}
+
+			Random rnd = new Random;
+
+			for (int i = 0; i < 52; i++) 
+			{
+				int rndIdX = rnd.Next (52 - i);
+
+				Card temp = _cards [i];
+				_cards [i] = _cards [i + rndIdX];
+				_cards [i + rndIdX] = temp;
+			}
+
+			_topCard = 0;
 		}
         
 		/// <summary>
