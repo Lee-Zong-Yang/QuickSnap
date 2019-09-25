@@ -30,10 +30,15 @@ namespace CardGames
 
 			if (myGame.IsStarted) {
 				if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT) && SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
-					//TODO: add sound effects
+					SwinGame.LoadSoundEffectNamed ("slap", "slap.wav");
+					SwinGame.PlaySoundEffect ("slap");
 				} else if (SwinGame.KeyTyped (KeyCode.vk_LSHIFT)) {
+					SwinGame.LoadSoundEffectNamed ("BananaSlap", "BananaSlap.wav");
+					SwinGame.PlaySoundEffect ("BananaSlap");
 					myGame.PlayerHit (0);
 				} else if (SwinGame.KeyTyped (KeyCode.vk_RSHIFT)) {
+					SwinGame.LoadSoundEffectNamed ("Pat", "Pat.wav");
+					SwinGame.PlaySoundEffect ("Pat");
 					myGame.PlayerHit (1);
 				}
 			}

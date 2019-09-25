@@ -61,7 +61,7 @@ namespace CardGames.GameLogic
 					_cards [i].TurnOver ();
 			}
 
-			Random rnd = new Random;
+			Random rnd = new Random();
 
 			for (int i = 0; i < 52; i++) 
 			{
